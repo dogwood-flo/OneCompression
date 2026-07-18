@@ -378,10 +378,11 @@ class Runner:
         )
         for q in target_quantizers:
             if q.exclude_layer_keywords is None:
-                q.exclude_layer_keywords = [keyword]
+                q.exclude_layer_keywords = [keyword, "shared_expert_gate"]
             elif keyword not in q.exclude_layer_keywords:
                 q.exclude_layer_keywords = list(q.exclude_layer_keywords) + [
-                    keyword
+                    keyword, 
+                    "shared_expert_gate",
                 ]
 
         self.logger.info(

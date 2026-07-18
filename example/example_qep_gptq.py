@@ -15,7 +15,7 @@ setup_logger()
 
 # Prepare the model
 model_config = ModelConfig(
-    model_id="Qwen/Qwen3.6-27B",
+    model_id="Qwen/Qwen3.6-35B-A3B",
     device="cuda",
 )
 
